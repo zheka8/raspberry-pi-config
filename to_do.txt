@@ -7,4 +7,4 @@
 * get long camera cable
 * setup git and GitHub
 * research webcam / stream options
-* setup VNC?s
+* setup VNC?

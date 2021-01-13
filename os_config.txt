@@ -2,6 +2,11 @@
 sudo apt install raspi-config
 sudo apt autoremove
 
+# RPI settings
+# setup wireless
+# hostname
+# password
+
 # check packages by size
 dpkg-query -Wf '${Installed-Size}\t${Package}
 ' | sort -n
@@ -11,17 +16,10 @@ sudo apt purge -y wolfram-engine
 sudo apt autoremove
 sudo apt clean
 
-
-# setup wireless
-
-# hostname
-
-# password
-
-
 # update packages and OS
 sudo apt update
 sudo apt full-upgrade
 sudo apt clean
 
 # setup eth0 for wired connectivity
+10.0.0.2 / 255.255.255.0
