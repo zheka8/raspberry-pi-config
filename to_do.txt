@@ -1,0 +1,10 @@
+* set password
+* OS update
+* set eth0 IP
+* enable SSH
+* test setup
+* enable camera and test
+* get long camera cable
+* setup git and GitHub
+* research webcam / stream options
+* setup VNC?s
