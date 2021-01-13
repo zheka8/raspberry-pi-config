@@ -1,4 +1,23 @@
 # RPI config
+sudo apt install raspi-config
+sudo apt autoremove
+
+# check packages by size
+dpkg-query -Wf '${Installed-Size}\t${Package}
+' | sort -n
+
+# remove woflram
+sudo apt purge -y wolfram-engine
+sudo apt autoremove
+sudo apt clean
+
+
+# setup wireless
+
+# hostname
+
+# password
+
 
 # update packages and OS
 sudo apt update
