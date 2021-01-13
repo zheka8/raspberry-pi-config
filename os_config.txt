@@ -22,9 +22,34 @@ sudo apt full-upgrade
 sudo apt clean
 
 # setup eth0 for wired connectivity
-10.0.0.2 / 255.255.255.0
+# edit /etc/dhcpcd.conf
+# 192.168.0.10 / 24
+interface eth0
+static ip_address=192.168.0.10/24
+static routers=192.168.0.1
+
 
 # update wpasupplicant
+sudo vi /etc/wpa_supplicant/wpa_supplicant.conf
+
 tls_disable_tlsv1_0=1
 tls_disable_tlsv1_1=1
 openssl_ciphers=DEFAULT@SECLEVEL=2
+
+wpasupplicant (2:2.6-19) unstable; urgency=medium
+
+  With this release, wpasupplicant no longer respects the system
+  default minimum TLS version, defaulting to TLSv1.0, not TLSv1.2. If
+  you're sure you will never connect to EAP networks requiring anything less
+  than 1.2, add this to your wpasupplicant configuration:
+
+    tls_disable_tlsv1_0=1
+    tls_disable_tlsv1_1=1
+
+  wpasupplicant also defaults to a security level 1, instead of the system
+  default 2. Should you need to change that, change this setting in your
+  wpasupplicant configuration:
+
+    openssl_ciphers=DEFAULT@SECLEVEL=2
+
+  Unlike wpasupplicant, hostapd still respects system defaults.
