@@ -1,0 +1,7 @@
+# RPI config
+
+# update packages and OS
+sudo apt update
+sudo apt full-upgrade
+
+# setup eth0 for wired connectivity
