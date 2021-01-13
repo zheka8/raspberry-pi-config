@@ -3,5 +3,6 @@
 # update packages and OS
 sudo apt update
 sudo apt full-upgrade
+sudo apt clean
 
 # setup eth0 for wired connectivity
