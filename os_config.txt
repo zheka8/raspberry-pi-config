@@ -18,11 +18,13 @@ sudo apt purge -y libreoffice*
 sudo apt autoremove
 sudo apt clean
 
-
 # update packages and OS
 sudo apt update
 sudo apt full-upgrade
 sudo apt clean
+
+# install rclone
+curl -L https://raw.github.com/pageauc/rclone4pi/master/rclone-install.sh | bash
 
 # setup eth0 for wired connectivity
 # edit /etc/dhcpcd.conf
