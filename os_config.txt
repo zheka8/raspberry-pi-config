@@ -6,16 +6,17 @@ sudo apt autoremove
 # setup wireless
 # hostname
 # password
-# predicable network interface names
 
 # check packages by size
 dpkg-query -Wf '${Installed-Size}\t${Package}
 ' | sort -n
 
-# remove woflram
+# remove unwanted large packages
 sudo apt purge -y wolfram-engine
+sudo apt purge -y libreoffice*
 sudo apt autoremove
 sudo apt clean
+
 
 # update packages and OS
 sudo apt update
