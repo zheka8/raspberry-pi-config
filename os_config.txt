@@ -6,6 +6,7 @@ sudo apt autoremove
 # setup wireless
 # hostname
 # password
+# timezone
 
 # check packages by size
 dpkg-query -Wf '${Installed-Size}\t${Package}
