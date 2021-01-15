@@ -27,6 +27,11 @@ sudo apt clean
 curl -L https://raw.github.com/pageauc/rclone4pi/master/rclone-install.sh | bash
 https://medium.com/@artur.klauser/mounting-google-drive-on-raspberry-pi-f5002c7095c2
 
+# setup a cronjob for rclone
+# move contents of images to gdrive folder images
+rclone move images gdrive:images
+# sync the logs
+rclone sync -v camera.log gdrive:logs
 
 # setup eth0 for wired connectivity
 # edit /etc/dhcpcd.conf

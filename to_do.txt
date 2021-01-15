@@ -1,8 +1,6 @@
 * set eth0 IP
 * test setup
-* enable camera and test
 * get long camera cable
-* setup git and GitHub
 * add git authentication of HTTPS to raspberry pi
 * research webcam / stream options
 * setup VNC?
