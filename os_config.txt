@@ -30,7 +30,7 @@ https://medium.com/@artur.klauser/mounting-google-drive-on-raspberry-pi-f5002c70
 # setup cron jobs
 # run sync every hour and camera.py on reboot
 # crontab -e
-0 * * * * /home/pi/Projects/raspberry-pi-timelapse-collect/sync.sh
+@hourly /home/pi/Projects/raspberry-pi-timelapse-collect/sync.sh
 @reboot python3 /home/pi/Projects/raspberry-pi-timelapse-collect/camera.py &
 
 ###### NOT DONE
