@@ -27,12 +27,13 @@ sudo apt clean
 curl -L https://raw.github.com/pageauc/rclone4pi/master/rclone-install.sh | bash
 https://medium.com/@artur.klauser/mounting-google-drive-on-raspberry-pi-f5002c7095c2
 
-# setup a cronjob for rclone
-# move contents of images to gdrive folder images
-rclone move images gdrive:images
-# sync the logs
-rclone sync -v camera.log gdrive:logs
+# setup cron jobs
+# run sync every hour and camera.py on reboot
+# crontab -e
+0 * * * * /home/pi/Projects/raspberry-pi-timelapse-collect/sync.sh
+@reboot python3 /home/pi/Projects/raspberry-pi-timelapse-collect/camera.py &
 
+###### NOT DONE
 # setup eth0 for wired connectivity
 # edit /etc/dhcpcd.conf
 # 192.168.0.10 / 24
