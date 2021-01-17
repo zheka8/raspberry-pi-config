@@ -33,6 +33,10 @@ https://medium.com/@artur.klauser/mounting-google-drive-on-raspberry-pi-f5002c70
 @hourly /home/pi/Projects/raspberry-pi-timelapse-collect/sync.sh
 @reboot python3 /home/pi/Projects/raspberry-pi-timelapse-collect/camera.py &
 
+# to verify cron
+more /var/log/syslog | grep CRON
+
+
 ###### NOT DONE
 # setup eth0 for wired connectivity
 # edit /etc/dhcpcd.conf
