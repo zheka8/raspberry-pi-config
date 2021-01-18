@@ -36,6 +36,12 @@ https://medium.com/@artur.klauser/mounting-google-drive-on-raspberry-pi-f5002c70
 # to verify cron
 more /var/log/syslog | grep CRON
 
+# to check IP addresses Pickering
+sudo nmap -sP 192.168.0.0/24
+
+# to check IP addresses Cambridge
+sudo nmap -sP 192.168.99.0/24
+
 
 ###### NOT DONE
 # setup eth0 for wired connectivity
