@@ -42,6 +42,8 @@ sudo nmap -sP 192.168.0.0/24
 # to check IP addresses Cambridge
 sudo nmap -sP 192.168.99.0/24
 
+# update Debian OS from Stretch (v9) to Buster (v10)
+https://pimylifeup.com/upgrade-raspbian-stretch-to-raspbian-buster/
 
 ###### NOT DONE
 # setup eth0 for wired connectivity
