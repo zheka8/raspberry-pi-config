@@ -8,7 +8,7 @@ sudo apt autoremove
   * password
   * timezone
   * enable VNC
-	* set resolution to 1024 x 780 
+	* set resolution to 1024 x 780
 
 # check packages by size
 dpkg-query -Wf '${Installed-Size}\t${Package}
@@ -49,3 +49,4 @@ https://pimylifeup.com/upgrade-raspbian-stretch-to-raspbian-buster/
 
 # configure key-based ssh
 https://www.digitalocean.com/community/tutorials/how-to-configure-ssh-key-based-authentication-on-a-linux-server
+  * to do: disable password authentication
