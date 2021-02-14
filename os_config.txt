@@ -3,10 +3,12 @@ sudo apt install raspi-config
 sudo apt autoremove
 
 # RPI settings
-# setup wireless
-# hostname
-# password
-# timezone
+  * setup wireless
+  * hostname
+  * password
+  * timezone
+  * enable VNC
+	* set resolution to 1024 x 780 
 
 # check packages by size
 dpkg-query -Wf '${Installed-Size}\t${Package}
@@ -45,10 +47,5 @@ sudo nmap -sP 192.168.99.0/24
 # update Debian OS from Stretch (v9) to Buster (v10)
 https://pimylifeup.com/upgrade-raspbian-stretch-to-raspbian-buster/
 
-###### NOT DONE
-# setup eth0 for wired connectivity
-# edit /etc/dhcpcd.conf
-# 192.168.0.10 / 24
-interface eth0
-static ip_address=192.168.0.10/24
-static routers=192.168.0.1
+# configure key-based ssh
+https://www.digitalocean.com/community/tutorials/how-to-configure-ssh-key-based-authentication-on-a-linux-server
