@@ -51,5 +51,6 @@ https://pimylifeup.com/upgrade-raspbian-stretch-to-raspbian-buster/
 https://www.digitalocean.com/community/tutorials/how-to-configure-ssh-key-based-authentication-on-a-linux-server
   * to do: disable password authentication
 
-# install vim
+# install vim and tmux
 sudo apt-get install vim
+sudo apt-get install tmux
