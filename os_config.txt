@@ -54,3 +54,32 @@ https://www.digitalocean.com/community/tutorials/how-to-configure-ssh-key-based-
 # install vim and tmux
 sudo apt-get install vim
 sudo apt-get install tmux
+
+# disable cups
+sudo systemctl stop cups
+sudo systemctl disable cups
+sudo systemctl disable cups.service
+sudo systemctl disable cups.socket
+sudo systemctl disable cups.path
+
+# disable pulseaudio
+pulseaudio --kill
+sudo vi /etc/pulse/client.conf
+    autospawn = no
+
+# disable triggerhappy
+sudo systemctl stop triggerhappy
+sudo systemctl disable triggerhappy
+
+# disable lightdm (desktop manager)
+sudo systemctl stop lightdm
+sudo systemctl disable lightdm
+
+# Boot into CLI only (no GUI)
+sudo raspi-config
+1. System options
+  S5. Boot / Auto Login
+    B1. Console
+
+# Configure Ethernet over USB (pi zero only?)
+https://learn.adafruit.com/turning-your-raspberry-pi-zero-into-a-usb-gadget/ethernet-gadget
