@@ -8,11 +8,11 @@ sudo apt autoremove
   * password
   * timezone
   * enable VNC
+  * enable camera interface
 	* set resolution to 1024 x 780
 
 # check packages by size
-dpkg-query -Wf '${Installed-Size}\t${Package}
-' | sort -n
+dpkg-query -Wf '${Installed-Size}\t${Package}' | sort -n
 
 # remove unwanted large packages
 sudo apt purge -y wolfram-engine
@@ -83,3 +83,4 @@ sudo raspi-config
 
 # Configure Ethernet over USB (pi zero only?)
 https://learn.adafruit.com/turning-your-raspberry-pi-zero-into-a-usb-gadget/ethernet-gadget
+(instead of editing /etc/network/interfaces, add usb0 to /etc/dhcpcd.conf, otherwise wlan0 interface dhcp doesn't work)
