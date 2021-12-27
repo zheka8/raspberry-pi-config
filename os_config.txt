@@ -25,6 +25,9 @@ sudo apt update
 sudo apt full-upgrade
 sudo apt clean
 
+# install git
+sudo apt install git
+
 # install rclone
 curl -L https://raw.github.com/pageauc/rclone4pi/master/rclone-install.sh | bash
 https://medium.com/@artur.klauser/mounting-google-drive-on-raspberry-pi-f5002c7095c2
