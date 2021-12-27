@@ -9,7 +9,7 @@ sudo apt autoremove
   * timezone
   * enable VNC
   * enable camera interface
-	* set resolution to 1024 x 780
+  * set resolution to 1024 x 780
 
 # check packages by size
 dpkg-query -Wf '${Installed-Size}\t${Package}' | sort -n
