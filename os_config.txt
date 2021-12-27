@@ -25,12 +25,21 @@ sudo apt update
 sudo apt full-upgrade
 sudo apt clean
 
-# install git
+# install needed packages
 sudo apt install git
+sudo apt install pip
 
 # install rclone
 curl -L https://raw.github.com/pageauc/rclone4pi/master/rclone-install.sh | bash
 https://medium.com/@artur.klauser/mounting-google-drive-on-raspberry-pi-f5002c7095c2
+
+# clone the repo and install required python packages
+cd home/pi
+mkdir Projects
+cd Projects
+git clone https://github.com/zheka8/raspberry-pi-timelapse-collect
+cd raspberry-pi-timelapse-collect
+pip install -r requirements .txt
 
 # setup cron jobs
 # run sync every hour and camera.py on reboot
